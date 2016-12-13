@@ -1,39 +1,70 @@
-# _TO DO LIST_
+# _TO DO LIST_ (C#, HTML, Nancy and Razor project, many-to-many)
 
-#### _Short Description._
+_*Epicodus C# week-4 Day 1 Exercise, 12-12-16*_
 
-#### By _**Annie Sonna**_
-
-## Description
-_Creates an address book that can be filled with multiple contacts. For each contact the user can store the contact's first name, last name, phone number, and multiple addresses._
-
-## Specs
-#### 1. _The program displays two options to the user: view all contacts and add a new contact._
-
-#### 2. _The program allows the user to create a new contact by entering the contact's first name, last name, phone number, email, and address._
-
-#### 3. __
+by Annie Sonna.
 
 
+##Description
 
-## Setup/Installation Requirements
+This webpage is an app for task tracking by category. The owner should be able to add a list of the tasks, and for each task, add categories under that tasks. This webpage demonstrates database usage with many-to-many relationships.
 
-* _Download the repository [here](https://github.com/asonna/To-do-list-csharp.git "Annie's To Do List"). Run on Windows with Powershell. In powershell, navigate into the repository directory and use command >dnx kestrel to run. Open up any browser window and enter localhost:5004 into URL search bar._
+
+###Objective from Epicodus page
+
+Practice the concept of many to many reltionship and how to code it in C# in association with razor, Nancy and SQL.
+
+
+##Specifications:
+
+I1. Input 1
+ - See the specDoc.txt file for all the specifications related to this website.
+
+##Setup/Installation requirements
+
+1. Clone this repository to desktop.
+2. Use powershell under window machine to navigate to the cloned project folder.
+3. Run the following command "dnu restore"
+4. You will need a database called "ToDo" with the "tasks" and "categories" tables.
+5. Connect to your server and use the following command to create the database:
+     - CREATE DATABASE ToDo;
+     - GO
+     - USE ToDo;
+     - GO
+     - CREATE TABLE categories (id INT IDENTITY(1,1)), name VARCHAR(255));
+     - GO
+     - CREATE TABLE tasks (id INT IDENTITY(1,1)), description VARCHAR(255));
+     - GO
+     - CREATE TABLE categories_tasks (id INT IDENTITY(1,1), category_id INT, task_id INT);
+     - GO
+6. Create a backup of above database called "ToDo_test" and restore it.
+7. When writing your test, you can use the following command line on PowerShell for testing: "dnx test".  
+8. Run "dnx kestel" command to run this app
+9. In your browser, navigate to http://localhost:5004/
+10. Then you are ready to start using this webpage!
 
 ## Known Bugs
+TBD.
 
-_None known._
 
-## Support and contact details
+## Technologies Used
 
-_Please contact author through GitHub at username: Asonna_
+1. html
+2. github
+3. Atom
+4. Nancy Web Application
+5. SQL Server Management
+6. C#
+7. Xunit
+8. Kestrel Server
+9. DNX
 
-## Technologies and Resources Used
 
-_HTML, CSS, C#, Nancy, Razor, Git, GitHub_
+## Link to the project on GitHub Pages
 
-### License
+https://github.com/asonna/ToDoList-Csharp
 
-*MIT*
 
-Copyright (c) 2016 **_Annie Sonna & Lina Shadrach_**
+## Copyright and license information
+
+Copyright (c) 2016 Annie Nguimzong Sonna
